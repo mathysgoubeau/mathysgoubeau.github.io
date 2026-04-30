@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathys Goubeau - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">MG</div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#education">Formation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-copy">
+                <div class="hero-badge">001 / Portfolio tech</div>
+                <h1><span>Mathys</span><span>Goubeau</span></h1>
+                <p class="subtitle">Étudiant EPITECH orienté C, algorithmique et développement système.</p>
+                <p class="tagline">Je cherche un environnement tech où coder, comprendre les bases, progresser avec une équipe et transformer mes projets école en vraie expérience terrain.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-label">FOCUS</span>
+                        <span class="stat-number">C / Algo / Système</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">LOCATION</span>
+                        <span class="stat-number">Marseille</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">STATUS</span>
+                        <span class="stat-number">Open to opportunities</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="#projects" class="btn btn-projects">Voir mes projets</a>
+                    <a href="#about" class="btn btn-secondary">Mon profil</a>
+                </div>
+            </div>
+            <div class="hero-portrait" aria-label="Portrait professionnel de Mathys Goubeau">
+                <img src="photo.jpeg" alt="Mathys Goubeau">
+                <div class="portrait-caption">
+                    <span>EPITECH Marseille</span>
+                    <span>2025 - 2030</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="photo.jpeg" alt="Mathys Goubeau">
+                </div>
+                <div class="about-content">
+                    <p>
+                        Je suis actuellement étudiant à EPITECH Marseille, en formation pour devenir ingénieur informatique. 
+                        Curieux de comprendre comment les programmes fonctionnent vraiment, je construis mes compétences par la pratique, 
+                        les projets école et l'apprentissage progressif des fondamentaux.
+                    </p>
+                    <p>
+                        Au-delà des études, je suis discipliné et rigoureux dans ma vie personnelle - je fréquente régulièrement 
+                        la salle de sport et j'aime maintenir un bon équilibre entre vie professionnelle et bien-être. 
+                        Mes premières expériences professionnelles se sont faites hors tech, mais elles m'ont donné de bons réflexes : 
+                        ponctualité, endurance, communication et respect des contraintes terrain.
+                    </p>
+                    <p>
+                        Je cherche à rejoindre des environnements où l'on code sérieusement, où l'on apprend vite, et où la qualité du travail compte.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Langages</h3>
+                    <p>C</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Outils</h3>
+                    <p>VSCode, Git, GitHub</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Soft Skills</h3>
+                    <p>Rigueur, Discipline, Autonomie</p>
+                </div>
+            </div>
+            <p class="note">* En développement constant - nouvelles compétences à venir</p>
+        </div>
+    </section>
+
+    <!-- Projects Section (moved before Experience) -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projets</h2>
+            <div class="project-grid">
+                <article class="project-card" tabindex="0">
+                    <div class="project-image" style="background-image: url('assets/my_hunter_grad.png')" aria-hidden="true"></div>
+                    <div class="project-content">
+                        <h3>my_hunter</h3>
+                        <p>Mini-jeu réalisé dans le cadre d'un projet Epitech — gameplay arcade simple et responsive.</p>
+                        <div class="project-tags"><span>C</span><span>Game</span><span>CSFML</span></div>
+                        <div class="project-links">
+                            <a class="btn btn-code" href="https://github.com/EpitechPGE1-2025/G-MUL-100-MAR-1-1-myhunter-9" target="_blank" rel="noopener">
+                                <svg class="icon-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.3-1.69-1.3-1.69-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.42-1.27.76-1.56-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.23-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.7 5.39-5.27 5.66.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                                </svg>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" tabindex="0">
+                    <div class="project-image" style="background-image: url('assets/my_ls_grad.png')" aria-hidden="true"></div>
+                    <div class="project-content">
+                        <h3>my_ls</h3>
+                        <p>Réalisation de la commande `ls` en C — parsing d'options et affichage formaté.</p>
+                        <div class="project-tags"><span>C</span><span>System</span></div>
+                        <div class="project-links">
+                            <a class="btn btn-code" href="https://github.com/EpitechPGE1-2025/G-PSU-100-MAR-1-1-myls-17" target="_blank" rel="noopener">
+                                <svg class="icon-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.3-1.69-1.3-1.69-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.42-1.27.76-1.56-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.23-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.7 5.39-5.27 5.66.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                                </svg>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" tabindex="0">
+                    <div class="project-image" style="background-image: url('assets/setting_up_grad.png')" aria-hidden="true"></div>
+                    <div class="project-content">
+                        <h3>setting_up</h3>
+                        <p>Trouver le plus grand carré dans une grille contenant des obstacles (projet algorithmique).</p>
+                        <div class="project-tags"><span>C</span><span>Algo</span></div>
+                        <div class="project-links">
+                            <a class="btn btn-code" href="https://github.com/EpitechPGE1-2025/G-CPE-110-MAR-1-1-settingup-24" target="_blank" rel="noopener">
+                                <svg class="icon-github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.3-1.69-1.3-1.69-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.42-1.27.76-1.56-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.23-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.7 5.39-5.27 5.66.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                                </svg>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Barman</h3>
+                        <p class="company">Cannes</p>
+                        <p class="date">Été 2025</p>
+                        <p class="description">Expérience en service client et gestion d'environnement dynamique.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Employé McDonald's</h3>
+                        <p class="company">Cannes</p>
+                        <p class="date">Été 2024</p>
+                        <p class="description">Travail en équipe, respect des protocoles et efficacité opérationnelle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Formation</h2>
+            <div class="education-card">
+                <h3>Ingénieur Informatique</h3>
+                <p class="school">EPITECH Marseille</p>
+                <p class="date">2025 - 2030</p>
+                <p class="description">Formation en programme grand école. Apprentissage des fondamentaux et de l'innovation technologique.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:mathys.goubeau@epitech.eu">mathys.goubeau@epitech.eu</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Marseille, France</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Réseaux</h3>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/mathys-goubeau-53320b393" target="_blank" aria-label="LinkedIn" class="social-link">
+                            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0zM7.5 8h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7C23.4 7.5 24 10 24 14.4V24h-5V15.4c0-2.2 0-5-3-5s-3.5 2.3-3.5 4.8V24h-5V8z" />
+                            </svg>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/mathysgoubeau" target="_blank" aria-label="GitHub" class="social-link">
+                            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.33-1.3-1.69-1.3-1.69-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.76.42-1.27.76-1.56-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.23-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.42-2.7 5.39-5.27 5.66.43.37.81 1.1.81 2.22 0 1.6-.02 2.89-.02 3.28 0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                            </svg>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mathys Goubeau. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
