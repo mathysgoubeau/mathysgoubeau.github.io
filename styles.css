@@ -610,6 +610,69 @@ section h2::before {
     background: rgba(255, 255, 255, 0.06);
 }
 
+/* ======================================
+   BackgroundPaths — hero animated lines
+   ====================================== */
+.hero-bg-paths {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-bg-paths path {
+    fill: none;
+    stroke: rgba(247, 247, 242, 0.13);
+    stroke-width: 0.6;
+    stroke-dasharray: 2200;
+    stroke-dashoffset: 2200;
+    animation: bp-draw var(--bp-dur, 9s) var(--bp-delay, 0s) linear infinite;
+}
+
+@keyframes bp-draw {
+    0%   { stroke-dashoffset: 2200; }
+    50%  { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -2200; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg-paths { display: none; }
+}
+
+/* ======================================
+   GlowCard — project card border glow
+   ====================================== */
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+        340px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+        rgba(255, 255, 255, 0.09),
+        transparent 65%
+    );
+    transition: opacity 0.35s ease;
+}
+
+.project-card.glow-active::after {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .project-card::after { display: none; }
+}
+
 .footer {
     padding: 2.5rem 0;
     border-top: 1px solid var(--line);

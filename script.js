@@ -1,3 +1,48 @@
+/* ── BackgroundPaths ──────────────────────────────────────────── */
+(function initBackgroundPaths() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const svg = document.querySelector('.hero-bg-paths');
+    if (!svg) return;
+
+    const NS = 'http://www.w3.org/2000/svg';
+    const W = 1200, H = 800, COUNT = 36;
+
+    for (let i = 0; i < COUNT; i++) {
+        const startX = -W / 4 + i * (W / COUNT);
+        const endX   =  W / 4 + i * (W / COUNT);
+        const ctrlX  = (startX + endX) / 2;
+        const d      = `M ${startX} ${H} Q ${ctrlX} ${H / 2} ${endX} 0`;
+
+        const path = document.createElementNS(NS, 'path');
+        path.setAttribute('d', d);
+        path.style.setProperty('--bp-dur',   `${7 + (i % 5) * 1.5}s`);
+        path.style.setProperty('--bp-delay', `${-(i * 0.55).toFixed(2)}s`);
+        svg.appendChild(path);
+    }
+}());
+
+/* ── GlowCard ─────────────────────────────────────────────────── */
+(function initGlowCards() {
+    if (window.matchMedia('(hover: none)').matches) return;
+
+    document.querySelectorAll('.project-card').forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width  * 100).toFixed(1);
+            const y = ((e.clientY - rect.top)  / rect.height * 100).toFixed(1);
+            card.style.setProperty('--glow-x', `${x}%`);
+            card.style.setProperty('--glow-y', `${y}%`);
+            card.classList.add('glow-active');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('glow-active');
+        });
+    });
+}());
+
+/* ── Scroll reveal ────────────────────────────────────────────── */
 const revealTargets = document.querySelectorAll(
     'section, .skill-card, .timeline-item, .project-card, .education-card, .contact-item'
 );
